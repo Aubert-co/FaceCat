@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const expressSession = require('express-session')
 const app = express()
-const route =require('./route/index')
+const route =require('./controller/route')
 
 app.use(express.json())
 app.use(expressSession({
