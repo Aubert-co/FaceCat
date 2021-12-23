@@ -1,4 +1,4 @@
-const bcript = require('bcrypts')
+const bcript = require('bcrypt')
 const Users = require('../model/users')
 module.exports = async function ApiLogin(req,res){
     try{
