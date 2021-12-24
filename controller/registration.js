@@ -6,6 +6,7 @@ module.exports = async function ApiRegistration(req,res){
 
     if(typeof name !== 'string')return res.status(401).send({msg:'invalid name'})
 
+    
 
 
     res.status(200).send({msg:'sucess'})
