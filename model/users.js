@@ -6,7 +6,7 @@ const Schema  =  new Sequelize('users','root','',{
     logging:false
 })
 
-const Users =  Schema.defined('usersface',{
+const Users =  Schema.define('usersface',{
     id:{
         type:Sequelize.INTEGER,
         primaryKey:true,
