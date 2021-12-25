@@ -2,16 +2,16 @@ const bcript = require('bcrypt')
 const Users = require('../model/users')
 module.exports = async function ApiLogin(req,res){
     try{
-    const {email,password} = req.body
+    const {name,password} = req.body
 
-    if(!email || !password)return res.status(401).send({msg:'invalid datas'})
+    if(!name || !password)return res.status(401).send({msg:'invalid datas'})
 
-    if(typeof email !== 'string')return res.status(401).send({msg:'invalid email'})
+    if(typeof name !== 'string')return res.status(401).send({msg:'invalid name'})
 
-    const findEmail = await Users.find({where:{
-        email
+    const findname = await Users.find({where:{
+        name
     }})
-    if(findEmail.lenght === 1){
+    if(findname.lenght === 1){
         
     }
     
