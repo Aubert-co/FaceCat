@@ -8,7 +8,8 @@ module.exports = async function ApiRegistration(req,res){
 
         if(typeof name !== 'string')return res.status(401).send({msg:'invalid name'})
 
-        var passwordHash
+        const passwordHash = bcrypt.hashSync(password,5)
+        
         const registration = await DataUsers.create({
             name:name,
             password:passwordHash
