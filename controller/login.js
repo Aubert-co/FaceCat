@@ -10,7 +10,9 @@ module.exports = async function ApiLogin(req,res){
         if(typeof name !== 'string')return res.status(401).send({msg:'invalid name'})
 
         const findname = await Users.findOne({where:{name}})
+
         if(findname.lenght === 0)return  res.status(405).send({msg:'user not found'})
+        
         const {id,password:passwordHash} =  findname
         const compare = bcrypt.compareSync(password,passwordHash)
         
