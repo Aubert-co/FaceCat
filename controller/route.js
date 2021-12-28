@@ -6,7 +6,7 @@ const ApiRegistration =require('./registration')
 const Middleware = require('../midlleware/index')
 route
 .get('/',Middleware,ApiIndex)
-.get('/apiprofile',Middleware,ApiProfile)
-.post('/apilogin',ApiLogin)
-.post('/apiregistration',ApiRegistration)
+.get('/profile',Middleware,ApiProfile)
+.post('/login',ApiLogin)
+.post('/registration',ApiRegistration)
 module.exports = route
