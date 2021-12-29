@@ -1,7 +1,11 @@
 const Users = require('../model/users')
 module.exports = async function EditProfile(req,res){
     try{
-        const {id,img,name,password} =  req.body
+        const token = req.headers['x-api-token']
+        const {jwt:json}= jwt.decode(token,'secret')
+
+        const {id} = json
+        const {img,name,password} =  req.body
         
         Users.update(name,{
             where:{id}
