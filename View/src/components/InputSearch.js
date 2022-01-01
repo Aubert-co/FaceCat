@@ -1,3 +1,7 @@
 export default function InputSearch(){
-    return <input></input>
+    return (
+        <>
+            <input placeholder="find users"></input>
+        </>
+    )
 }
