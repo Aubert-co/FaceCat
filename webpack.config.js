@@ -1,11 +1,11 @@
 const path = require('path')
 const HTMLWEBPACK = require('html-webpack-plugin')
-const webpack = require('webpack')
+
 module.exports = {
     //soucemap mapeamento de todos os arquivos
     devtool:'source-map',
     
-   // mode:'production',
+    mode:'production',
     entry :{
         index:'/View/src/index.js'
     },
